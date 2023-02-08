@@ -100,15 +100,15 @@ func Highlight(r io.Reader) (string, error) {
 }
 
 func keyValue(l yamlLine) string {
-	return fmt.Sprintf("%v: %v\n", BrightRed(l.key), Yellow(l.value))
+	return fmt.Sprintf("%v: %v\n", Blue(l.key), Green(l.value))
 }
 
 func keyNumberOrIP(l yamlLine) string {
-	return fmt.Sprintf("%v: %v\n", BrightRed(l.key), Blue(l.value))
+	return fmt.Sprintf("%v: %v\n", Blue(l.key), Magenta(l.value))
 }
 
 func keyBool(l yamlLine) string {
-	return fmt.Sprintf("%v: %v\n", BrightRed(l.key), Blue(l.value))
+	return fmt.Sprintf("%v: %v\n", Blue(l.key), Black(l.value))
 }
 
 func comment(l yamlLine) string {
